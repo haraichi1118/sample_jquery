@@ -1,0 +1,34 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>animate</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button#animate").click(function(){
+
+    var element = document.getElementById("animateBox");
+    var bounds = element.getBoundingClientRect();
+    var x = bounds.left;
+    var move = x + 250;
+    console.log("move=" + move);
+
+    $("div").animate({left:'391.34375px'});
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div class="subBody2">
+<h2>ボタン押下で右に移動します</h2>
+<button class="btn-main btn-main:hover" id="animate">animate</button>
+</br></br>
+<div id="animateBox" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+</div>
+
+</body>
+</html>

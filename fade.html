@@ -1,0 +1,37 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>fade</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button#fadeIn").click(function(){
+    $("div#fadeIn1").fadeIn();
+    $("div#fadeIn2").fadeIn("slow");
+    $("div#fadeIn3").fadeIn(3000);
+  });
+  $("button#fadeOut").click(function(){
+    $("div#fadeIn1").fadeOut();
+    $("div#fadeIn2").fadeOut("slow");
+    $("div#fadeIn3").fadeOut(1000);
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div class="subBody2">
+<h2>ボタン押下でフェードイン、フェードアウトします</h2>
+<button class="btn-main btn-main:hover" id="fadeIn">fadeIn</button>
+<button class="btn-main btn-main:hover" id="fadeOut">fadeOut</button>
+</br></br>
+<div id="fadeIn1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="fadeIn2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="fadeIn3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>click event</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button#click").click(function(){
+    $("p#click").hide();
+  });
+
+  $("p#dblclick").dblclick(function(){
+    $(this).hide();
+  });
+
+  $("p#mouseenter").mouseenter(function(){
+  	console.log("マウスONしました。")
+  });
+
+  $("p#mouseleave").mouseleave(function(){
+  	console.log("マウスOFFしました。")
+  });
+
+});
+</script>
+</head>
+
+<body>
+
+<div class="subBody">
+<h2>ボタン押下でここからしたの要素が消える</h2>
+<p id="click">項目1</p>
+<p id="click">項目2</p>
+<p id="click">項目3</p>
+<button class="btn-main btn-main:hover" id="click">hide</button>
+</div>
+
+</br>
+
+<div class="subBody">
+<h2>以下の項目をダブルクリックすると消えます</h2>
+<p id="dblclick">ダブルクリック項目1</p>
+<p id="dblclick">ダブルクリック項目2</p>
+<p id="dblclick">ダブルクリック項目3</p>
+</div>
+
+</br>
+
+<div class="subBody">
+<h2>以下の項目の上にマウスを乗せるとログが出力されます</h2>
+<p id="mouseenter">マウスON項目1</p>
+</div>
+
+</br>
+
+<div class="subBody">
+<h2>以下の項目の上からマウスを離すとログが出力されます</h2>
+<p id="mouseleave">マウスOFF項目1</p>
+</div>
+
+
+</body>
+</html>
